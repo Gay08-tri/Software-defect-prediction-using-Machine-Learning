@@ -1,0 +1,116 @@
+{% extends 'users/userbase.html' %}
+{% block contents %}
+
+<!DOCTYPE html>
+  <html>
+  <style>
+  input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .formDiv {
+    margin: 0 200px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  </style>
+
+<body>
+    <div class="formDiv">
+<h2 align="center" style="color:rgb(50, 19, 190);font-weight:bold;">Passed: {{ msg }}</h2>
+<form action="" method="POST">
+    {% csrf_token %}
+<center>
+
+    <label>loc:</label>
+    <input type="text" id="loc" name="loc" required><br>
+
+    <label>v_g:</label>
+    <input type="text" id="v_g" name="v_g" required><br>
+
+    <label>ev_g:</label>
+    <input type="text" id="ev_g" name="ev_g" required><br>
+
+    <label>iv_g:</label>
+    <input type="text" id="iv_g" name="iv_g" required><br>
+
+    <label>n:</label>
+    <input type="text" id="n" name="n" required><br>
+
+    <label>v:</label>
+    <input type="text" id="v" name="v" required><br>
+
+    <label>l:</label>
+    <input type="text" id="l" name="l" required><br>
+
+    <label>d:</label>
+    <input type="text" id="d" name="d" required><br>
+
+    <label>i:</label>
+    <input type="text" id="i" name="i" required><br>
+
+
+    <label>e:</label>
+    <input type="text" id="e" name="e" required><br>
+
+    <label>b:</label>
+    <input type="text" id="b" name="b" required><br>
+
+    <label>t:</label>
+    <input type="text" id="t" name="t" required><br>
+
+    <label>lOCode:</label>
+    <input type="text" id="lOCode" name="lOCode" required><br>
+
+    <label>lOComment:</label>
+    <input type="text" id="lOComment" name="lOComment" required><br>
+
+    <label>lOBlank:</label>
+    <input type="text" id="lOBlank" name="lOBlank" required><br>
+
+    <label>locCodeAndComment:</label>
+    <input type="text" id="locCodeAndComment" name="locCodeAndComment" required><br>
+
+    <label>uniq_Op:</label>
+    <input type="text" id="uniq_Op" name="uniq_Op" required><br>
+
+    <label>uniq_Opnd:</label>
+    <input type="text" id="uniq_Opnd" name="uniq_Opnd" required><br>
+
+    <label>total_Op:</label>
+    <input type="text" id="total_Op" name="total_Op" required><br>
+
+    <label>total_Opnd:</label>
+    <input type="text" id="total_Opnd" name="total_Opnd" required><br>
+
+    <label>branchCount:</label>
+    <input type="text" id="branchCount" name="branchCount" required><br>
+    
+
+    <input type="submit" value="submit">
+</center>
+</div>
+</body>
+</html>
+
+{% endblock %}
